@@ -1,53 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Example of Semantic HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #eee;
+        }
+        nav {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav img {
+            width: 25%;
+        }
+        nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #7d3838;
+        }
+        .main {
+            margin-top: 13%;
+            margin-left: 8%;
+        }
+        .main h1 {
+            font-size: 50px;
+        }
+        span {
+            color: #7d3838;
+        }
+        .main p {
+            font-size: 30px;
+            color: gray;
+            font-weight: bold;
+            line-height: 25px;
+        }
+        .main a {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .images {
+            width: 45%;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            right: 100px;
+        }
+        .images img {
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+            transition: bottom 1s, left 1s;
+        }
+        .images:hover .shape {
+            bottom: 40px;
         }
     </style>
 </head>
 <body>
-    <!-- Header with navigation bar -->
-    <header>
+    <div class="hero">
         <nav>
+            <img src="" alt="Portfolio logo" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Hire Me</a></li>
             </ul>
         </nav>
-    </header>
 
-    <!-- Main section with article -->
-    <main>
-        <article>
-            <h1>Example of Semantic HTML</h1>
-            <p>This is an example of how to use semantic HTML elements to structure a web page.</p>
-            <p>Semantic HTML elements provide a clear meaning to the structure of a web page, making it easier for search engines and screen readers to understand the content.</p>
-        </article>
-    </main>
+        <div class="main">
+            <h1>Hello! I am <span>Uvhan</span></h1>
+            <p>This is my portfolio and a little gist <br>
+                of who I am and <br>
+                what I aspire for..</p>
+            <a href="C:\Users\SHREE\Desktop\html\resume">Download CV</a>
+        </div>
 
-    <!-- Sidebar with related links -->
-    <aside>
-        <h2>Related Links</h2>
-        <ul>
-            <li><a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=1792s&pp=ygUYaHRtbCBhbmQgY3NzIGZ1bGwgY291cnNl" targt = "_blank">HTML Tutorial</a></li>
-            <li><a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=1792s&pp=ygUYaHRtbCBhbmQgY3NzIGZ1bGwgY291cnNl" target = "_blank">CSS Tutorial</a></li>
-            <li><a href="https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=1711s&pp=ygUVamF2YXNjcmlwdGZ1bGwgY291cnNl"  target="_blank">JavaScript Tutorial</a></li>
-
-        </ul>
-    </aside>
-
-    <!-- Footer with contact information -->
-    <footer>
-        <p>Contact Information:</p>
-        <ul>
-            <li>Email: <a href="mailto:example@example.com">example@example.com</a></li>
-            <li>Phone: 555-555-5555</li>
-            <li>Address: 123 Main St, Anytown, USA 12345</li>
-        </ul>
-    </footer>
+        <div class="images">
+            <img src="C:\Users\SHREE\Pictures\Camera Roll\frame.png" alt="Shape" class="shape">
+            <img src="C:\Users\SHREE\Pictures\redmi pics\13113.jpg" alt="My Picture" class="boy">
+        </div>
+    </div>
 </body>
 </html>
